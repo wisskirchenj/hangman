@@ -36,3 +36,5 @@ Have fun!
 25.02.23 Stage 1 completed. Just print output.
 
 25.02.23 Stage 2 completed. Just one word guess.
+
+25.02.23 Stage 3 completed. A word guess for a randomly picked word from a given list.
