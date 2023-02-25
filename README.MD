@@ -34,3 +34,5 @@ Have fun!
 25.02.23 Project started - gitHub repo and project structure setup.
 
 25.02.23 Stage 1 completed. Just print output.
+
+25.02.23 Stage 2 completed. Just one word guess.

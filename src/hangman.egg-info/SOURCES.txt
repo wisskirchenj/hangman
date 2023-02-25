@@ -3,7 +3,12 @@ README.md
 setup.cfg
 setup.py
 src/hangman/__init__.py
+src/hangman/main.py
 src/hangman.egg-info/PKG-INFO
 src/hangman.egg-info/SOURCES.txt
 src/hangman.egg-info/dependency_links.txt
 src/hangman.egg-info/top_level.txt
+src/hangman/__pycache__/__init__.cpython-311.pyc
+src/hangman/__pycache__/main.cpython-311.pyc
+test/test_main.py
+test/__pycache__/test_main.cpython-311-pytest-7.2.1.pyc
