@@ -38,3 +38,6 @@ Have fun!
 25.02.23 Stage 2 completed. Just one word guess.
 
 25.02.23 Stage 3 completed. A word guess for a randomly picked word from a given list.
+
+25.02.23 Stage 4 completed. A word guess for a randomly picked word from a given list - now with three beginning letters
+shown and '-' for missing letters. MagicMock.assert_called_with() used.
