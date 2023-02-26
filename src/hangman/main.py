@@ -13,10 +13,6 @@ class Hangman:
     @staticmethod
     def print_title():
         print('H A N G M A N')
-    
-    @staticmethod
-    def print_bye():
-        print("\nThanks for playing!")
 
     def random_word(self, seed: int | None) -> str:
         if seed:
