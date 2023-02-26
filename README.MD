@@ -43,3 +43,5 @@ Have fun!
 shown and '-' for missing letters. MagicMock.assert_called_with() used.
 
 26.02.23 Stage 5 completed. Real hangman game with covered letters and 8 tries - but without ready check still. Used map()
+
+26.02.23 Stage 6 completed. Complete hangman game now with 8 allowed fail attempts and proper win / loose message.
