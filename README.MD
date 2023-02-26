@@ -27,7 +27,7 @@ Have fun!
 
 ## Project completion
 
-[//]: # (Project was completed on 08.01.23)
+Project was completed on 26.02.23
 
 ## Progress
 
@@ -45,3 +45,7 @@ shown and '-' for missing letters. MagicMock.assert_called_with() used.
 26.02.23 Stage 5 completed. Real hangman game with covered letters and 8 tries - but without ready check still. Used map()
 
 26.02.23 Stage 6 completed. Complete hangman game now with 8 allowed fail attempts and proper win / loose message.
+
+26.02.23 Stage 7 completed. Added some input testing on letters and identify doubled letters.
+
+26.02.23 Final Stage 8 completed. Add a play loop with results statistics and exit option
