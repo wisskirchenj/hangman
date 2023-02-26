@@ -41,3 +41,5 @@ Have fun!
 
 25.02.23 Stage 4 completed. A word guess for a randomly picked word from a given list - now with three beginning letters
 shown and '-' for missing letters. MagicMock.assert_called_with() used.
+
+26.02.23 Stage 5 completed. Real hangman game with covered letters and 8 tries - but without ready check still. Used map()

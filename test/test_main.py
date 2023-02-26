@@ -2,36 +2,30 @@ from io import StringIO
 from unittest.mock import patch, MagicMock
 import unittest
 
-from hangman.main import main, random_word
+from hangman.main import Hangman
 
 
 class HangmanTest(unittest.TestCase):
 
     def test_random_word(self):
-        self.assertEquals(random_word(1), 'java')
-        self.assertEquals(random_word(44), 'javascript')
-        self.assertEquals(random_word(55), 'python')
-        self.assertEquals(random_word(333), 'swift')
+        game = Hangman()
+        self.assertEquals(game.random_word(1), 'java')
+        self.assertEquals(game.random_word(44), 'javascript')
+        self.assertEquals(game.random_word(55), 'python')
+        self.assertEquals(game.random_word(333), 'swift')
+
+    def test_get_progress(self):
+        game = Hangman(1)
+        game.letters_asked.add('a')
+        self.assertEquals('-a-a', game.get_progress())
+        game.letters_asked.add('v')
+        self.assertEquals('-ava', game.get_progress())
 
     @patch('builtins.input')
     @patch('sys.stdout', new_callable=StringIO)
-    def test_stage4_win(self, mock_stdout: StringIO, mock_input):
-        mock_args = ['java']
+    def test_stage5_do_guessing(self, mock_stdout: StringIO, mock_input: MagicMock):
+        mock_args = ['a', 'i', 'o', 'z', 'l', 'p', 'h', 'k']
         mock_input.side_effect = mock_args
-        main(seed=1)
-        self.assertTrue(mock_stdout.getvalue().find('You survived!') >= 0)
-
-    @patch('builtins.input')
-    @patch('sys.stdout', new_callable=StringIO)
-    def test_stage4_loose(self, mock_stdout: StringIO, mock_input):
-        mock_args = ['java']
-        mock_input.side_effect = mock_args
-        main(seed=55)
-        self.assertTrue(mock_stdout.getvalue().find('You lost!') >= 0)
-
-    @patch('builtins.input')
-    def test_stage4_hidden_word(self, mock_input: MagicMock):
-        main(seed=55)
-        mock_input.assert_called_once_with('Guess the word pyt---: ')
-        main(seed=44)
-        mock_input.assert_called_with('Guess the word jav-------: ')
+        Hangman(seed=44).do_guessing()
+        self.assertTrue(mock_stdout.getvalue().count("That letter doesn't appear in the word.") == 5)
+        mock_input.assert_called_with("\n-a-a---ip-\nInput a letter: ")
